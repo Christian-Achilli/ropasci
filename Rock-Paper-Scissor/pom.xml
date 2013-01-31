@@ -10,7 +10,7 @@
 	<name>Rock Paper Scissors game</name>
 
 	<properties>
-		<gwtVersion>2.4.0</gwtVersion>
+		<gwtVersion>2.5.0</gwtVersion>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<webappDirectory>src/main/webapp</webappDirectory>
@@ -55,12 +55,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.googlecode.gwt.inject</groupId>
-			<artifactId>gin</artifactId>
-			<version>1.5.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.google.web.bindery</groupId>
 			<artifactId>requestfactory-server</artifactId>
 			<version>${gwtVersion}</version>
@@ -75,18 +69,6 @@
 			<groupId>com.google.inject.extensions</groupId>
 			<artifactId>guice-assistedinject</artifactId>
 			<version>3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.vaadin.gwtgraphics</groupId>
-			<artifactId>gwt-graphics</artifactId>
-			<version>0.9.7</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.adamtacy</groupId>
-			<artifactId>gwt-fx</artifactId>
-			<version>0.5.0_MS_1</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -141,22 +123,13 @@
 		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
 
 		<resources>
-		<resource>
-		<directory>src/main/java</directory>
-		<includes>
-		<include>**/*.java</include>
-		<include>**/*.ui.xml</include>
-		</includes>
-		</resource>
-		<resource>
-		<directory>src/main/resources</directory>
-		<includes>
-		<include>**/*.xml</include>
-		<include>**/*.xls</include>
-		<include>**/*.properties</include>
-		<include>**/*.dtd</include>
-		</includes>
-		</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+					<include>**/*.ui.xml</include>
+				</includes>
+			</resource>
 		</resources>
 
 
@@ -166,20 +139,6 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<webResources>
-						<resource>
-							<!-- this is relative to the pom.xml directory -->
-							<directory>src/main/resources</directory>
-							<!-- <targetPath>WEB-INF</targetPath> -->
-							<includes>
-								<include>**/*.xml</include>
-								<include>**/*.properties</include>
-								<include>**/*.xls</include>
-								<include>**/*.xsd</include>
-								<include>**/*.pdf</include>
-							</includes>
-						</resource>
-					</webResources>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -295,7 +254,7 @@
 				<configuration>
 					<gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath>
 					<extraJvmArgs>-XX:MaxPermSize=512M -Xmx1024M</extraJvmArgs>
-					<module>com.chris.interview.ebay.Ropasci</module>
+					<module>com.chris.interview.RopasciGame</module>
 					<runTarget>RopasciGame.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
 					<warSourceDirectory default-value="${basedir}/src/main/webapp" />

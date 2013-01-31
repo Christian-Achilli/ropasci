@@ -1,7 +1,5 @@
 package com.chris.interview.client.ropasci.factories;
 
-import org.junit.Test;
-
 import com.chris.interview.client.ropasci.valueObjects.ChoiceCode;
 import com.chris.interview.client.ropasci.valueObjects.Paper;
 import com.chris.interview.client.ropasci.valueObjects.PlayerChoice;
@@ -34,7 +32,7 @@ public class ChoiceFactory {
 		return createPlayerChoiceFromCode(ChoiceCode.S);
 	}
 	
-	@Test
+	// @Test commented out for the GWT compiler
 	public void randomTest() {
 		double i = Math.rint(Math.random() * 100);
 		System.out.print(i);
