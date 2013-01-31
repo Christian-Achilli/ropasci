@@ -1,16 +1,22 @@
-package com.chris.interview.server.valueObjects;
+package com.chris.interview.client.ropasci.valueObjects;
 
 public abstract class PlayerChoice {
     public abstract String getDescription();
-    public abstract String getCode();
+
+    public abstract ChoiceCode getCode();
+
     @Override
     public int hashCode() {
 	final int prime = 31;
 	int result = 1;
-	result = prime * result + ((getCode() == null) ? 0 : getCode().hashCode());
-	result = prime * result + ((getDescription() == null) ? 0 : getDescription().hashCode());
+	result = prime * result
+		+ ((getCode() == null) ? 0 : getCode().hashCode());
+	result = prime
+		* result
+		+ ((getDescription() == null) ? 0 : getDescription().hashCode());
 	return result;
     }
+
     @Override
     public boolean equals(Object obj) {
 	if (this == obj)
@@ -32,5 +38,5 @@ public abstract class PlayerChoice {
 	    return false;
 	return true;
     }
-    
+
 }

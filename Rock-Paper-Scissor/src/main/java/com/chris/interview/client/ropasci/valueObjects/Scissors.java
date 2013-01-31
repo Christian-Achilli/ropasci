@@ -1,12 +1,13 @@
-package com.chris.interview.server.valueObjects;
+package com.chris.interview.client.ropasci.valueObjects;
 
 public class Scissors extends PlayerChoice {
     @Override
     public String getDescription() {
 	return "Scissors";
     }
+
     @Override
-    public String getCode() {
-	return "S";
+    public ChoiceCode getCode() {
+	return ChoiceCode.S;
     }
 }

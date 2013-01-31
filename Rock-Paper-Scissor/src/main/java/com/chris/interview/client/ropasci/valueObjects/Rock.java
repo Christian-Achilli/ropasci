@@ -1,12 +1,13 @@
-package com.chris.interview.server.valueObjects;
+package com.chris.interview.client.ropasci.valueObjects;
 
 public class Rock extends PlayerChoice {
     @Override
     public String getDescription() {
 	return "Rock";
     }
+
     @Override
-    public String getCode() {
-	return "R";
+    public ChoiceCode getCode() {
+	return ChoiceCode.R;
     }
 }
